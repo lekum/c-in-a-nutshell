@@ -1,7 +1,6 @@
 // circle.c: Calculate and print the areas of circles
+#include "functions.h"
 #include <stdio.h> // Preprocessor directive
-
-double circularArea( double r ); // Function declaration (prototype form)
 
 int main()
     // Definition of main() begins
@@ -15,14 +14,4 @@ int main()
     area = circularArea( radius );
     printf( "%10.1f %10.2f\n", radius, area );
     return 0;
-}
-
-// The function circularArea() calculates the area of a circle
-// Parameter: The radius of the circle
-// Return value: The area of the circle
-
-double circularArea( double r )
-{
-    const double pi = 3.1415926536;
-    return pi * r * r;
 }
