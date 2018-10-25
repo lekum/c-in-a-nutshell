@@ -13,5 +13,6 @@ int main()
     radius = 5.0;
     area = circularArea( radius );
     printf( "%10.1f %10.2f\n", radius, area );
+    printChars();
     return 0;
 }
