@@ -1,6 +1,7 @@
 #include "functions.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 
 // The function circularArea() calculates the area of a circle
 // Parameter: The radius of the circle
@@ -14,7 +15,11 @@ double circularArea( double r )
 
 double printChars()
 {
-	wchar_t wc = L'\u00df';
+	char *loc_str = setlocale(LC_ALL, "");
+	if (loc_str == 0)
+		printf("Failed to set locale\n");
+	printf("LC_ALL = %s\n", loc_str);
+	wchar_t wc = L'\x3B1';
 	char mbStr[MB_CUR_MAX];
 	int nBytes = 0;
 	nBytes = wctomb( mbStr, wc);
