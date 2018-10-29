@@ -15,6 +15,7 @@ double circularArea( double r )
 
 double printChars()
 {
+	printf("Entering %s\n", __func__);
 	char *loc_str = setlocale(LC_ALL, "");
 	if (loc_str == 0)
 		printf("Failed to set locale\n");
