@@ -1,5 +1,6 @@
 #include <complex.h>
 #include <stdio.h>
+#include <math.h>
 
 int main()
 {
@@ -14,4 +15,14 @@ int main()
   f_z = f_z / 3;
   d_z = d_z - f_z;
   printf("d_z = %.2f+j%.2f\n", creal(d_z), cimag(d_z));
+
+  int i = 7;
+  float b = 0.5;
+
+  i = b;
+
+  b += 2.5;
+  b = sqrt(i);
+
+  printf("%f\n", b);
 }
