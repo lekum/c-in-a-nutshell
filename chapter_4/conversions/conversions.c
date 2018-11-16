@@ -15,6 +15,9 @@ int main()
   f_z = f_z / 3;
   d_z = d_z - f_z;
   printf("d_z = %.2f+j%.2f\n", creal(d_z), cimag(d_z));
+  d_z += I;
+  printf("d_z = %.2f+j%.2f\n", creal(d_z), cimag(d_z));
+
 
   int i = 7;
   float b = 0.5;
