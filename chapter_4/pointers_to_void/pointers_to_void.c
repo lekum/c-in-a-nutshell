@@ -22,7 +22,7 @@ int main()
 {
   float *pNumbers = malloc(ARR_LEN*sizeof(float));
   for (int i = 0; i < ARR_LEN; i++)
-    pNumbers[i] = i + i%4;
+    pNumbers[i] = i + i%4 + i%3;
   qsort(pNumbers, ARR_LEN, sizeof(float), floatcmp);
   for (int i = 0; i < ARR_LEN; i++)
     printf("pNumbers[%d]=%.2f\n", i, pNumbers[i]);
