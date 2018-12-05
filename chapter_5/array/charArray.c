@@ -1,5 +1,9 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <math.h>
+
+#define ARRAY_SIZE 100
 
 int main()
 {
@@ -14,4 +18,16 @@ int main()
     else
       printf("%c\n", a[i]);
   }
+
+  double *pArray = NULL; int i = 0;
+  pArray = malloc(ARRAY_SIZE * sizeof(double)); // Generate the array
+  if (pArray != NULL) {
+    for (i = 0; i < ARRAY_SIZE; i++)
+    {
+      pArray[i] = (double)rand()/RAND_MAX;
+      printf("pArray[%d]=%.5f\n", i, pArray[i]);
+    }
+  }
+
+
 }
